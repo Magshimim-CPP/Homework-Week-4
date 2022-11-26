@@ -3,6 +3,8 @@
 #define PLAINTEXT_H
 
 #include <iostream>
+#include <string>
+
 using std::string;
 
 class PlainText
@@ -14,9 +16,8 @@ protected:
 public:
 	PlainText(string text);
 	~PlainText();
-	bool isEncrypted();
-	string getText();
+	bool isEncrypted() const;
+	string getText() const;
+
 };
-
-
 #endif

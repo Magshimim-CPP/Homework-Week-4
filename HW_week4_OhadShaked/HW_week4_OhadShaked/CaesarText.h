@@ -3,15 +3,16 @@
 #define CAESARTEXT_H
 
 #include <iostream>
+#include "ShiftText.h"
 using std::string;
 
-class CaesarText
+class CaesarText : public ShiftText
 {
 public:
 	CaesarText(string text);
 	~CaesarText();
-	string encrypt(string text);
-	string decrypt(string text);
+	static string encrypt(string& text);
+	static string decrypt(string& text);
 	string encrypt();
 	string decrypt();
 };

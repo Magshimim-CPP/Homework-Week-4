@@ -133,7 +133,11 @@
     <ClInclude Include="SubstitutionText.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CaesarText.cpp" />
     <ClCompile Include="PlainText.cpp" />
+    <ClCompile Include="ShiftText.cpp" />
+    <ClCompile Include="SubstitutionText.cpp" />
+    <ClCompile Include="test1Shift.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

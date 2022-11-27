@@ -1,9 +1,13 @@
 #pragma once
 #ifndef SHIFTTEXT_H
 #define SHIFTTEXT_H
-#include "PlainText.h"
+
 #include <iostream>
+#include "PlainText.h"
+
 using std::string;
+
+#define ZERO 0
 
 class ShiftText : public PlainText
 {

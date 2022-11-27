@@ -27,6 +27,9 @@
     <ClInclude Include="SubstitutionText.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="FileHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PlainText.cpp">
@@ -41,7 +44,10 @@
     <ClCompile Include="CaesarText.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="test1Shift.cpp">
+    <ClCompile Include="test3static.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileHelper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

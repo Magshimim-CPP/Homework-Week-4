@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "ShiftText.h"
+
 using std::string;
 
 class CaesarText : public ShiftText

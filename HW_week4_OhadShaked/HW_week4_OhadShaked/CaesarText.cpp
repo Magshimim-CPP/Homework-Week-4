@@ -1,10 +1,8 @@
 #include "CaesarText.h"
 
 #define KEY 3
-CaesarText::CaesarText(string text) : ShiftText(text, KEY)
-{
 
-}
+CaesarText::CaesarText(string text) : ShiftText(text, KEY){}
 
 CaesarText::~CaesarText()
 {

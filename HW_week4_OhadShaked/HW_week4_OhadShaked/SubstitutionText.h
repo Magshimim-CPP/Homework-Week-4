@@ -1,6 +1,7 @@
 #pragma once
 #ifndef SUBSTITUTIONTEXT_H
 #define SUBSTITUTIONTEXT_H
+
 #include "PlainText.h"
 #include <iostream>
 #include <string>
@@ -8,8 +9,9 @@
 
 using std::cout;
 using std::ifstream;
-using std::ostringstream;
 using std::string;
+
+#define ALPHABET "abcdefghijklmnopqrstuvwxyz"
 
 class SubstitutionText : public PlainText
 {

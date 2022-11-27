@@ -7,6 +7,8 @@
 
 using std::string;
 
+#define ZERO 0
+
 class PlainText
 {
 protected:
@@ -14,6 +16,7 @@ protected:
 	bool _isEncrypted;
 
 public:
+	static int numOfTexts;
 	PlainText(string text);
 	~PlainText();
 	bool isEncrypted() const;

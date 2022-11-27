@@ -17,7 +17,7 @@ string ShiftText::encrypt(string& text, int key)
 {
     string result = "";
 
-    for (int i = 0; i < text.length(); i++)
+    for (int i = ZERO; i < text.length(); i++)
     {
 
         if (isalpha(text[i]) && !isupper(text[i]))
@@ -38,7 +38,7 @@ string ShiftText::decrypt(string& text, int key)
 {
     string result = "";
 
-    for (int i = 0; i < text.length(); i++)
+    for (int i = ZERO; i < text.length(); i++)
     {
 
         if (isalpha(text[i]) && !isupper(text[i]))

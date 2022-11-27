@@ -128,16 +128,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CaesarText.h" />
+    <ClInclude Include="FileHelper.h" />
     <ClInclude Include="PlainText.h" />
     <ClInclude Include="ShiftText.h" />
     <ClInclude Include="SubstitutionText.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CaesarText.cpp" />
+    <ClCompile Include="FileHelper.cpp" />
     <ClCompile Include="PlainText.cpp" />
     <ClCompile Include="ShiftText.cpp" />
     <ClCompile Include="SubstitutionText.cpp" />
-    <ClCompile Include="test1Shift.cpp" />
+    <ClCompile Include="test3static.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

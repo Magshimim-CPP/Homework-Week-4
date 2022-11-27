@@ -1,7 +1,5 @@
 #include "SubstitutionText.h"
 
-#define ALPHABET "abcdefghijklmnopqrstuvwxyz"
-
 SubstitutionText::SubstitutionText(string text, string dictionaryFileName) : PlainText(text)
 {
 	_dictionaryFileName = dictionaryFileName;
@@ -22,7 +20,7 @@ string SubstitutionText::encrypt(string& text, string dictionaryFileName)
 	char ch;
 	string alphabet = ALPHABET;
 	ifstream key;
-	key.open("dictionary.csv");
+	key.open(dictionaryFileName);
 	
 	while (key)
 	{
@@ -33,7 +31,7 @@ string SubstitutionText::encrypt(string& text, string dictionaryFileName)
 		key.get(ch);
 		
 	}
-
+	key.close();
 	for (int i = 0; i < text.length(); i++)
 	{
 		if (isalpha(text[i]) && islower(text[i]))
@@ -56,7 +54,7 @@ string SubstitutionText::decrypt(string& text, string dictionaryFileName)
 	string dict;
 	string alphabet = ALPHABET;
 	ifstream key;
-	key.open("dictionary.csv");
+	key.open(dictionaryFileName);
 
 	while (key)
 	{
@@ -67,7 +65,7 @@ string SubstitutionText::decrypt(string& text, string dictionaryFileName)
 		key.get(ch);
 
 	}
-
+	key.close();
 	for (int i = 0; i < text.length(); i++)
 	{
 		if (isalpha(text[i]) && islower(text[i]))

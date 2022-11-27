@@ -25,6 +25,7 @@ public:
 	static string decrypt(string& text, string dictionaryFileName);
 	string encrypt();
 	string decrypt();
+	friend ostream& operator<<(ostream& output, const SubstitutionText& text);
 };
 
 

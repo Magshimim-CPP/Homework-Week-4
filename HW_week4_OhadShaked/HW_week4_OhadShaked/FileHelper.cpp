@@ -8,11 +8,11 @@ string FileHelper::readFileToString(string fileName)
 
 	file.open(fileName);
 
-	while (file.good())
+	while (file)
 	{
 		file.get(ch);
 
-		if (file.good())
+		if (file)
 		{
 			result += ch;
 		}

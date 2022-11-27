@@ -100,3 +100,9 @@ string SubstitutionText::decrypt()
 	}
 	return _text;
 }
+
+ostream& operator<<(ostream& output, const SubstitutionText& text)
+{
+	output << "Substitution\n\n" << text.getText();
+	return output;
+}

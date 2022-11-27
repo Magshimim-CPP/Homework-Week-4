@@ -85,3 +85,9 @@ char ShiftText::decryptLetter(string text, int place, int key)
     return char((int(text[place] - key - 97) % 26 + 26) % 26 + 97);
 }
 
+ostream& operator<<(ostream& output, const ShiftText& text)
+{
+    output << "Shift\n\n" << text.getText();
+    return output;
+}
+

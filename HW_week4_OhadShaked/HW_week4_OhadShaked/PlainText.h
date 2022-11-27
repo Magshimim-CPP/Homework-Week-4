@@ -6,6 +6,7 @@
 #include <string>
 
 using std::string;
+using std::ostream;
 
 #define ZERO 0
 
@@ -21,6 +22,6 @@ public:
 	~PlainText();
 	bool isEncrypted() const;
 	string getText() const;
-
+	friend ostream& operator<<(ostream& output, const PlainText& text);
 };
 #endif

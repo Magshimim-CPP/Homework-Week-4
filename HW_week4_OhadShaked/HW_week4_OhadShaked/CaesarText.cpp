@@ -28,3 +28,9 @@ string CaesarText::decrypt()
 {
     return ShiftText::decrypt();
 }
+
+ostream& operator<<(ostream& output, const CaesarText& text)
+{
+    output << "Caesar\n\n" << text.getText();
+    return output;
+}

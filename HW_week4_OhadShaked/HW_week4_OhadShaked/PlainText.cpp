@@ -24,3 +24,9 @@ string PlainText::getText() const
 {
 	return _text;
 }
+
+ostream& operator<<(ostream& output, const PlainText& text)
+{
+	output << "Plain\n\n" << text._text;
+	return output;
+}

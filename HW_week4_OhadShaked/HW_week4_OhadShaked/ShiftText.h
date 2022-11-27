@@ -23,6 +23,7 @@ public:
 	string decrypt();
 	static char decryptLetter(string text, int place, int key);
 	static char encryptLetter(string text, int place, int key);
+	friend ostream& operator<<(ostream& output, const ShiftText& text);
 };
 
 

@@ -44,10 +44,10 @@
     <ClCompile Include="CaesarText.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="test3static.cpp">
+    <ClCompile Include="FileHelper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FileHelper.cpp">
+    <ClCompile Include="test4Files.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

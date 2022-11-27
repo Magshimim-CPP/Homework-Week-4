@@ -8,18 +8,25 @@ string FileHelper::readFileToString(string fileName)
 
 	file.open(fileName);
 
-	while (file)
+	if (file)
 	{
-		file.get(ch);
-
-		if (file)
+		while (file)
 		{
-			result += ch;
-		}
-		
-	}
+			file.get(ch);
 
-	file.close();
+			if (file)
+			{
+				result += ch;
+			}
+
+		}
+
+		file.close();
+	}
+	else
+	{
+		result = FILE_NOT_FOUND;
+	}
 
 	return result;
 }
@@ -33,19 +40,26 @@ void FileHelper::writeWordsToFile(string inputFileName, string outputFileName)
 	outFile.open(outputFileName);
 	inFile.open(inputFileName);
 
-	while (inFile.good())
+	if (outFile && inFile)
 	{
-		inFile >> result;
-		outFile << result;
-
-		if (inFile.good())
+		while (inFile.good())
 		{
-			outFile << '\n';
-		}
-	}
+			inFile >> result;
+			outFile << result;
 
-	inFile.close();
-	outFile.close();
+			if (inFile.good())
+			{
+				outFile << '\n';
+			}
+		}
+
+		inFile.close();
+		outFile.close();
+	}
+	else
+	{
+		cout << ONE_OR_MORE_FILES_NOT_FOUND << endl;
+	}
 }
 
 void FileHelper::saveTextInFile(string text, string outputFileName)
@@ -54,10 +68,18 @@ void FileHelper::saveTextInFile(string text, string outputFileName)
 
 	outFile.open(outputFileName);
 
-	for (int i = ZERO; i < text.length(); i++)
+	if (outFile)
 	{
-		outFile << text[i];
+		for (int i = ZERO; i < text.length(); i++)
+		{
+			outFile << text[i];
+		}
+
+		outFile.close();
 	}
 
-	outFile.close();
+	else
+	{
+		cout << FILE_NOT_FOUND << endl;
+	}
 }

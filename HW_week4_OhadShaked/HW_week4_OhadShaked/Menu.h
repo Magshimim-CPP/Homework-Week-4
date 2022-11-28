@@ -74,9 +74,9 @@ class MenuActions
 {
 //Setting public functions for the MenuActions class.
 public:
-	static void stringCipher(string& userString);
-	static void fileCipher();
-	static void checkInput(int& num);
+	static void stringCipher(string& userString); //Static function for option 1 of the main menu (Encrypt/Decrypt a string). String menu and actions with user interface.
+	static void fileCipher(); //Static function for option 2 of the main menu (Encrypt/Decrypt a .txt file). Files menu and actions with user interface.
+	static void checkInput(int& num); //Static function to check input errors (cin fail), in case user enterd a char to int etc..
 };
 
 #endif

@@ -150,9 +150,7 @@ void MenuActions::fileCipher()
 
 void MenuActions::checkIfDigit(int& num)
 {
-	if (num < ZERO || num > 255){}
-
-	else if (cin.fail())
+	if (cin.fail())
 	{
 		num = ERROR_NUMBER;
 		cin.clear();

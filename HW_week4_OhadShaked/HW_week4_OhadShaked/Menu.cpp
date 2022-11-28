@@ -11,7 +11,7 @@ int main()
 		cout << MENU_OPTIONS;
 		cin >> menuChoice;
 		
-		MenuActions::checkIfDigit(menuChoice);
+		MenuActions::checkInput(menuChoice);
 
 		switch (menuChoice)
 		{
@@ -55,7 +55,7 @@ void MenuActions::stringCipher(string& userString)
 	cout << CIPHER_OPTIONS;
 	cin >> stringMenuChoice;
 
-	checkIfDigit(stringMenuChoice);
+	checkInput(stringMenuChoice);
 
 	while (stringMenuChoice < MIN_OPTION || stringMenuChoice > MAX_STRING_OPTION)
 	{
@@ -63,7 +63,7 @@ void MenuActions::stringCipher(string& userString)
 		cout << RANGE_ERROR << endl;
 		cout << RESET_COLOR;
 		cin >> stringMenuChoice;
-		checkIfDigit(stringMenuChoice);
+		checkInput(stringMenuChoice);
 	}
 
 	if (stringMenuChoice == ENC_SHIFT || stringMenuChoice == DEC_SHIFT)
@@ -71,7 +71,7 @@ void MenuActions::stringCipher(string& userString)
 		cout << KEY_INPUT;
 		cin >> key;
 
-		checkIfDigit(key);
+		checkInput(key);
 
 		while (key < MIN_KEY || key > MAX_KEY)
 		{
@@ -79,7 +79,7 @@ void MenuActions::stringCipher(string& userString)
 			cout << KEY_ERROR;
 			cout << RESET_COLOR;
 			cin >> key;
-			checkIfDigit(key);
+			checkInput(key);
 		}
 	}
 
@@ -129,7 +129,7 @@ void MenuActions::fileCipher()
 		cout << ASK_SAVE << endl;
 		cin >> toSave;
 
-		checkIfDigit(toSave);
+		checkInput(toSave);
 
 		if (toSave == ZERO)
 		{
@@ -148,7 +148,7 @@ void MenuActions::fileCipher()
 
 }
 
-void MenuActions::checkIfDigit(int& num)
+void MenuActions::checkInput(int& num)
 {
 	if (cin.fail())
 	{
